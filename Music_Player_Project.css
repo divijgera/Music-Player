@@ -1,0 +1,1523 @@
+/*Variables used in the CSS Code*/
+:root{
+	--body-background-color : #0C1027;
+}
+
+:root{
+	--theme-color: #0C1027;
+}
+
+
+
+/*General HTML and Body margins and padding values*/
+html,body {
+	padding: 0px;
+	margin: 0px;
+	background-color: var(--body-background-color);
+}
+
+
+/*Button Transition Effect on Click. This is applied to every button on the webpage giving them a subtle look.*/
+button{
+	transition: all 20ms ease-out;
+}
+
+button:active {
+  box-shadow: 0 1px #666;
+  transform: translateY(1px);
+}
+
+
+
+/*The common Container to every element on my webpage*/
+#con{
+	width: 100%;
+	
+	text-align: center;
+	background-color: var(--theme-color);
+	vertical-align: top;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+/*Navigation Bar and its contents*/
+#nav-bar{
+	width: 95%;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: fixed;
+	z-index: 500;
+	z-index: 10;
+	left: 2%;
+	top: 0%;
+	padding: 1%;
+	padding-bottom: 0;
+	background-color: var(--theme-color);
+}
+
+/*The vinyl logo keeps rotating. Credits to the rotating animation declared at the bottom of this CSS File*/
+#nav-bar-logo{
+	display: relative;
+	left: 0%;
+	
+}
+
+#nav-bar-logo img{
+	border-radius: 50%;
+	height: 60px;
+	width: 60px;
+	transition: all 20ms ease-out;
+	box-shadow: rgba(255, 0, 0, 1) 0 3px 5px;
+	margin-right: 10px;
+	animation: rotate 2s ease-in-out infinite;
+}
+
+#nav-bar-logo img:hover{
+	opacity: 0.8;
+    box-shadow: inset 0 1px 0 0 darkgrey,inset 0 -1px 0 0 lightgrey,inset 0 0 0 1px lightgrey,0 2px 4px 0 darkgrey;	
+}
+
+#nav-bar-text{
+	display: flex;
+	flex-flow: column wrap;
+	font-size: 1.1rem;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	line-height: 0pt;
+}
+
+#nav-bar-text span:hover{
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+#nav-text{
+	align-self: center;
+	margin-left: 10%;
+	cursor: pointer;
+	margin-right: auto;
+	zoom: 1.1;
+
+}
+
+#nav-text:hover{
+	opacity: 0.8;
+	color: #F12D43;
+}
+
+/*Search Bar and its contents such as search, microphone and notification buttons all of which have subtle and simplistic hover effects*/
+#search-bar{
+	margin-left: auto;
+	align-self: center;
+	float: right;
+	zoom: 1.3;
+}
+
+#search-bar input{
+	background-color: #12193E;
+	color:white;
+	box-shadow: none;
+	margin:0px;
+	padding: 6px;
+    font-size: 12px;
+    border: none;
+    width: 65%;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+#search-bar button{
+	background-color:  #12193E ;
+	border: none;
+    padding: 5px 5px;
+    width: 12%
+    font-size: 12px;
+    cursor: pointer;
+
+}
+
+#search-bar .fas{
+	color: white !important;
+	background-color: #12193E;
+	margin: 0px;
+}
+
+#search-bar .fas:hover{
+	color: #93A8B3;
+	opacity: 0.8;
+}
+
+#btn1{
+	border-radius: 6px;
+	border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#btn2{
+	border-radius: 6px;
+	border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#notification{
+	align-self: center;
+	margin-left: auto;
+}
+
+#btn3{
+	background-color:  var(--theme-color) ;
+	border: none;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    color: white;
+    align-self: center;
+
+}
+
+#btn3 .fas{
+	margin: auto;
+	align-self: center;
+}
+
+#btn3 .fas:hover{
+	color: #F12D43 !important;
+}
+
+/*Profile Picture-Profile picture On hovering over it, my initials DG are visible with a smooth transition effect*/
+#profile-pic{
+	align-self: center;	
+	margin-left: auto;
+	position: relative;
+	zoom: 1.2;
+}
+
+#profile{
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	object-fit: cover;
+
+}
+
+#profile-text{
+	visibility: hidden;
+	font-size: 1.5rem;
+	color: black;
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-weight: 200;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: visibility 0s, opacity 0.5s linear;
+	background-color: lightgrey;
+	font-family: ;
+
+}
+
+#profile-pic:hover #profile-text{
+	visibility: visible;
+    opacity: 0.8;
+    box-shadow: 0px 0px 6px 4px lightblue;
+}
+
+
+/*Nav-Bar Dropdown Menu, which is a part of responsive design*/
+#nav-bar-dropdown{
+	position: absolute;
+	visibility: hidden;
+	display: none;
+}
+
+.nav-bar-dropdown-menu{
+	visibility: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: lightgrey;
+	width: 320%;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-around;
+	align-items: center;
+	padding: 5px;
+	
+}
+
+.nav-bar-dropdown-menu span{
+	font-size: 1rem;
+	text-align: center;
+	width: 100%;
+	color: black;
+	border-bottom: 1.2px solid black;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+#btn4{
+	background-color:  grey ;
+	border: none;
+    padding: 5px 5px 5px 0px;
+    width: 12%
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 0px;
+    border-radius: 3px; 
+    cursor: pointer;
+}
+
+.nav-bar-dropdown-menu input{
+	background-color: grey;
+	color:white;
+	box-shadow: none;
+	margin:0px;
+	padding: 6px;
+    font-size: 12px;
+    border: none;
+    width: 60%;
+    border-radius: 3px;
+    cursor: pointer; 
+}
+
+.nav-bar-dropdown-menu input::placeholder{
+	opacity: 1;
+	color: white;
+}
+
+.nav-bar-dropdown:hover .nav-bar-dropdown-menu{
+	visibility: visible;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.disk{
+	color: #F12D43;
+	animation: rotate 2s ease-in-out infinite;
+}
+
+
+/*Container Section*/
+#container{
+	background-color: var(--theme-color);
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 1%;
+	display: flex;
+	flex-flow: row wrap;
+	position: absolute;
+	top: 12%;
+
+}
+
+#main{
+	width: 63%;
+	margin-left: 3%;
+	position: sticky;
+	z-index: 5;
+	
+	overflow: scroll;
+	background-attachment: fixed;
+}
+
+/*Carousel*/
+
+/*The Carousel is made using a slide animation which is explained at the bottom of the CSS file*/
+.carousel {
+  max-width: 85%;
+  max-height: 40vh;
+  overflow: hidden;
+  /*box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 255, 255, 1);*/
+  border-radius: 1rem;
+  cursor: pointer;
+  margin-bottom: 5%;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+.carousel figure {
+  width: 500%;
+  position: relative;
+  animation: slide 10s linear infinite;
+  object-fit: contain;
+  margin: 0px;
+}
+
+.carousel figure img {
+  display: block;
+  float: left;
+  min-width: 20% !important;
+  max-height: 300px !important;
+  object-fit: stretch;
+  left: 0%;
+  margin: 0px;
+}
+
+.carousel:hover{
+	opacity: 0.8;
+}
+
+
+/*Latest Release Section*/
+#latest-release{
+	margin-left: 3%;
+}
+
+/*Song Cards*/
+#card-container{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.cards{
+	width: 45%;
+	display: flex;
+	flex-flow: row wrap;
+	margin-bottom: 1%;
+	margin-right: 0.8%;
+	position: relative;
+}
+
+.cover-image{
+	position: relative;
+}
+
+.cover-image img{
+	height: 80px;
+	width: 80px;
+	transition: all 20ms ease-out;
+	box-shadow: grey 2px 3px 5px;
+	margin-right: 10px;
+}
+
+.playbutton{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 80px;
+	width: 80px;
+	transition: all 20ms ease-out;
+	visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	color: black;
+}
+
+.cover-image:hover .playbutton{
+	visibility: visible;
+	opacity: 0.8;
+}
+
+.art{
+	display: flex;
+	flex-flow: column wrap;
+	font-size: 0.8rem;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	line-height: 0pt !important;
+	margin-left: 10px;
+}
+
+.controls{
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+	line-height: 25pt;
+	position: absolute;
+	right: 10%;
+}
+
+.controls i{
+	color: white;
+
+}
+
+.length{
+	opacity: 0.9;
+	font-size: 0.6rem;
+}
+
+.control-options{
+	visibility: hidden;
+	position: absolute;
+	right: 0%;
+	top: 2%;
+	background-color: white;
+	display: flex;
+	flex-flow: column wrap;
+	width: 800%;
+	cursor: pointer;
+	z-index: 100;
+	
+}
+
+.control-options .fas,.far{
+	color: black !important;
+}
+
+.control-options span{
+	border-bottom: 1px solid black; 
+	font-size: 0.6rem;
+}
+.control-options span:nth-child(4){
+	border-bottom: none; 
+}
+
+.controls:hover .control-options{
+	visibility: visible;
+}
+
+
+/*Popular Artists*/
+#popular{
+	margin-left: 3%;
+	width: 95%;
+}
+
+.artists{
+	display: flex;
+	flex-flow: row wrap;
+	width: 90%;
+	justify-content: space-around;
+	margin-top: 30px;
+}
+
+.artists>span{
+	display: flex;
+	flex-flow: column wrap;
+	font-size: 0.8rem;
+	width: 13%;
+	position: relative;
+}
+
+.play-artist{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+	width: 100%;
+	height: 50%;
+	border-radius: 50%;
+	background-color: white;
+	color: grey;
+	opacity: 0.7;
+
+}
+
+.artists img{
+	width: 100% !important;
+	height: 50% !important;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 10px;
+}
+
+.artists span span{
+	text-align: center;
+	width: 100%;
+}
+
+.artists>span:hover{
+	opacity: 0.8;
+	zoom: 1.2;
+	transform: scale(1.2);
+
+}
+
+.artists>span:hover .play-artist{
+	visibility: visible;
+}
+
+
+
+/*Genres appearing in a panel in circles*/
+#genres{
+	margin-left: 3%;
+	width: 83%;
+	display: flex;
+	flex-flow: row wrap;
+	background-color: #121845;
+	margin-bottom: 20px;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.gen{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	position: relative;
+	cursor: pointer;
+}
+
+.gen img{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	object-fit: cover;
+	opacity: 0.6;
+
+}
+
+.gen-text{
+	opacity: 0.8;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+
+/*Other Genres that appear on the page as rectangular cards with scale effect on hover*/
+#genre-card{
+	margin-left: 3%;
+	width: 83%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+
+}
+
+
+.gen-square{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	position: relative;
+	width: 32% !important;
+	overflow: hidden;
+}
+
+.gen-square img{
+	width: 100% ;
+	height: 180px ;
+	object-fit: cover;
+	opacity: 0.6;
+	transition: all 0.6s ease-in;
+}
+
+
+
+.gen-text-square{
+	opacity: 0.8;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100% ;
+	height: 180px ;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.gen-square:hover .cc{
+
+	transform: scale(1.5);
+	object-fit: cover;
+	text-align: center;
+
+}
+
+
+/*Latest Songs Section- Same for Latest Hindi and Latest English Sections*/
+.latest{
+	margin-left: 3%;
+	width: 95%;
+}
+
+.latest-songs{
+	display: flex;
+	flex-flow: row wrap;
+	width: 90%;
+	justify-content: space-around;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+.song-cards{
+	display: flex;
+	flex-flow: column wrap;
+	width: 13%;
+	align-items: flex-start;
+}
+
+.song-cover{
+	width: 100%;
+	height: 100px;
+	object-fit: fill;
+}
+ .song-name-card{
+ 	font-size: 0.8rem !important; 
+ 	margin-top: 7px;
+ }
+
+ .song-date{
+ 	font-size: 0.7rem !important; 
+ 	opacity: 0.6 !important;
+ 	
+ }
+
+ .song-cards:hover{
+ 	transform: scale(1.2);
+ 	opacity: 0.8;
+ 	cursor: pointer;
+ }
+
+
+
+/*Playlist Section*/
+#playlist{
+	width: 30%;
+	position: sticky;
+	overflow-y: scroll;
+}
+
+
+/*The header section for my playlist section. 
+Consists of a bold white colored heading along with a dropdown menu that appears on hover*/
+#playlist-header{
+	display: flex;
+	width: 25%;
+	position: fixed;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	z-index: 500;
+}
+
+.dropdown-queue{
+	align-self: center;
+	position: relative;
+	z-index: 500;
+}
+
+.drop-menu{
+	text-align: left;
+	padding: 6px;
+	line-height: 30px;
+	position: absolute;
+	top: 25px;
+	right: 0;
+	visibility: hidden;
+	background-color: white;
+	justify-content: center;
+	align-items: center;
+	width: 200%;
+	z-index: 100;
+}
+
+
+
+.dropdown-queue:hover .drop-menu{
+	visibility: visible;
+	z-index: 5;
+	opacity: 1;
+	cursor: pointer;
+}
+
+
+/*Playlist Body Section*/
+
+#playlist-body{
+	
+	width: 28%;
+	position: fixed;
+	margin-top: 80px;
+	overflow-y: scroll;
+	height: 480px;
+}
+
+.playlist-card{
+	width: 90%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	position: relative;
+	margin-top: 10px;
+}
+
+.serial-number{
+	align-self: center;
+}
+
+.playlist-cover img{
+	height: 50px;
+	width: 50px;
+	object-fit: fill;
+	margin-right: 10px;
+
+}
+
+.playlist-title{
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-start !important;
+	align-items: flex-start;
+}
+
+.song-name{
+	font-size: 0.8rem;
+}
+
+.artist-name{
+	font-size: 0.7rem !important;
+	margin-top: 5px;
+	opacity: 0.6 !important;
+}
+
+.add-to-fav{
+	position: absolute;
+	right: 2%;
+	color: white;
+	align-self: center;
+}
+
+.add-to-fav .far{
+	color: white !important;
+}
+
+.serial-number{
+	align-self: center;
+	opacity: 0.5 !important;
+	font-size: 0.8rem;
+	margin-right: 10px;
+}
+
+.add-to-fav .far:hover{
+	opacity: 0.8;
+	color: #F12D43 !important;
+}
+
+
+
+/*Music Player Section*/
+
+/*This section is a separate fixed section that appears at the very bottom.
+ It shows the details of the current song and has playback controls
+*/
+
+#music-player{
+	position: fixed;
+	visibility: hidden;
+	bottom: 0;
+	padding: 5px;
+	background-color: #282828;
+	width: 100vw;
+	display: flex;
+	flex-flow: row wrap;
+	z-index: 500;
+
+}
+
+#music-player:target{
+	visibility: visible;
+}
+
+
+.song-details{
+	display: flex;
+	flex-flow: row wrap;
+	position: relative;
+	left: 4%;
+	align-self: center;
+}
+
+.emotes{
+	display: flex;
+	justify-content: space-around;
+	align-self: flex-start;
+	margin-top: 5%;
+	margin-left: 5px;
+}
+
+.emotes .far,.fas{
+	opacity: 0.9;
+	margin-left: 5px;
+	transform: scale(0.8);
+}
+
+.emotes .heart{
+	color: white !important;
+}
+
+.emotes .far:hover{
+	opacity: 0.8;
+	color: #F12D43 !important;
+}
+
+.emotes .fas:hover{
+	opacity: 0.8;
+}
+
+.player{
+	display: flex;
+	flex-flow: column wrap;
+	width: 35%;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	left: 20%;
+}
+
+.play-buttons{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 50%;
+	align-items: center;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.play-buttons .far{
+	color: white !important;
+	align-self: center;
+	opacity: 1 ;
+}
+
+.play-buttons .far,.fas:hover{
+	opacity: 0.8;
+}
+
+
+
+.timeline{
+	width: 90%;
+	margin: auto;
+	position: relative;
+	background-color: #404040;
+	height: 5px;
+	border-radius: 3px;
+}
+
+
+.percentage{
+	position: relative;
+	left: 0%;
+	width: 60%;
+	background-color: #3DEB95;
+	height: 100%;
+	border-radius: 3px;
+
+}
+
+.controller{
+	position: absolute;
+	left: 57%;
+	top: 0%;
+	margin: auto;
+	margin-top: -6px;
+	color: white !important;
+}
+
+.controller .fas{
+	color: white !important;
+}
+
+.timer{
+	display: flex;
+	flex-flow: row wrap;
+	width: 90%;
+	margin: auto;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	justify-content: space-between;
+
+}
+
+.timer span{
+	opacity: 0.8;
+	font-size: 0.6rem;
+}
+
+.sidepanel{
+	display: flex;
+	flex-flow: row wrap;
+	width: 20%;
+	position: relative;
+	left: 25%;
+	align-items: center;
+	justify-content: space-between;
+	color: white;
+}
+
+.sidepanel i{
+	color: white
+}
+
+.sidepanel i:hover{
+	opacity: 0.8;
+}
+
+.volume-controller{
+	width: 60%;
+	position: relative;
+	background-color: #404040;
+	height: 5px;
+	border-radius: 3px;
+}
+
+.current-volume{
+	position: relative;
+	left: 0%;
+	width: 50%;
+	background-color: #3DEB95;
+	height: 100%;
+	border-radius: 3px;
+}
+
+.left{
+	left: 39% ;
+}
+
+
+#nav-bar-dropdown-footer{
+	position: absolute;
+	visibility: hidden;
+	display: none;
+}
+
+.nav-bar-dropdown-menu-footer{
+	visibility: hidden;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background-color: lightgrey;
+	width: 320%;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-around;
+	align-items: center;
+	padding: 5px;
+	
+}
+
+.nav-bar-dropdown-menu-footer span{
+	font-size: 1rem;
+	text-align: center;
+	width: 100%;
+	color: black;
+	border-bottom: 1.2px solid black;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+
+.nav-bar-dropdown-menu-footer input{
+	background-color: grey;
+	color:white;
+	box-shadow: none;
+	margin:0px;
+	padding: 6px;
+    font-size: 12px;
+    border: none;
+    width: 60%;
+    border-radius: 3px;
+    cursor: pointer; 
+}
+
+.nav-bar-dropdown-menu-footer input::placeholder{
+	opacity: 1;
+	color: white;
+}
+
+.nav-bar-dropdown-footer:hover .nav-bar-dropdown-menu-footer{
+	visibility: visible;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+#btn4-footer{
+	background-color:  grey ;
+	border: none;
+    padding: 5px 5px 1px 0px;
+    width: 12%
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 0px;
+    border-radius: 3px; 
+    cursor: pointer;
+}
+
+.disk{
+	color: #F12D43;
+	animation: rotate 2s ease-in-out infinite;
+}
+
+
+/*Animations*/
+
+
+/*Animation controlling the rotation of the logo in the header navigation bar*/
+@keyframes rotate{
+	from {
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(720deg);
+	}
+}
+
+/*Animation that controls the movement of images in the carousel*/
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+  22.5% {
+    left: 0;
+  }
+
+  25% {
+    left: -100%;
+  }
+
+  47.5% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  72.5% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  97.5% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+/*Text Decoration and style classes*/
+.comic{
+	font-family: "Comic Sans MS", Sans-Serif;
+
+}
+.blur{
+	opacity: 0.9;
+	font-weight: 200;
+}
+
+.bold{
+	font-weight: 700;
+}
+.heading{
+	text-align: left;
+	margin-top: 20px;
+	font-size: 1.2rem;
+
+}
+
+.verdana{
+	font-family: "verdana";
+}
+
+.border-bottom-thin{
+	border-bottom: 1px solid black;
+}
+
+
+
+/*Font-colors*/
+.white{
+	color: white;
+}
+
+.green{
+	color: #4DD9BA;
+}
+
+.dark{
+	color: #10142A;
+	font-weight: 600;
+}
+.black{
+	color: black;
+}
+
+
+/*CLEAR FIX FOR FLOATS*/
+.clearFix::before,
+.clearFix::after {
+  content: "";
+  display: table;
+}
+
+.clearFix::after {
+  clear: both;
+}
+
+.clearFix {
+  zoom: 1;
+}
+/*END CLEAR FIX*/
+
+
+/*Responsiveness*/
+@media only screen and (max-width: 1067px)
+{
+	.cards{
+		width: 90%;
+
+	}
+
+	.carousel figure img {
+	  min-width: 20% !important;
+	  max-width: 20% !important;
+	  max-height: 300px !important;
+	  min-height: 300px !important;
+	  
+	}
+
+	.sidepanel{
+		width: 15%;
+	}
+
+}
+
+
+@media only screen and (max-width: 1070px){
+
+	#genres{
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.gen img{
+		width: 60px;
+		height: 60px;
+		margin-right: 10px;
+
+	}
+
+	.gen-text{
+		width: 60px;
+		height: 60px;
+
+	}
+
+}
+
+@media only screen and (max-width: 850px){
+	#playlist-body{
+		width: 30%;
+	}
+	.playlist-card{
+		width: 100%;
+	}
+	.latest{
+	width: 90%;
+	}
+
+	.latest-songs{
+		width: 100%;
+	}
+
+	.song-cards{
+		width: 26%;
+		margin-bottom: 20px;
+	}
+
+	.song-cover{
+		height: 80px;
+		width: 80%;
+		
+	}
+
+	.drop-menu{
+		
+		width: 150%;
+		z-index: 500 !important;
+	}
+	.player{
+		width: 35%;
+		left: 7%;
+	}
+	.sidepanel{
+		width: 15%;
+		left: 15%;
+	}
+	.song-details{
+		left: 2%;
+	}
+}
+
+
+@media only screen and (max-width: 680px){
+
+	.artists span span{
+		text-align: center;
+		width: 100%;
+		font-size: 0.6rem;
+    }
+
+    .heading{
+    	font-size: 1rem;
+    }
+
+    .latest-songs{
+    	margin-bottom: 10px;
+    }
+
+    #main{
+    	width: 100%;
+    	position: relative;
+    	margin-bottom: 10px;
+    }
+
+    #playlist-body{
+		width: 90%;
+		margin: auto;
+		margin-top: 20px;
+		position: relative;
+		max-height: 800px;
+		min-height: 800px;
+	}
+
+	#playlist{
+		width: 100%;
+		position: relative;
+	}
+
+	#playlist-header{
+		display: flex;
+		width: 90%;
+		position: relative;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		margin-left: 6%;
+		z-index: 5;
+	}
+
+	#popular{
+		width: 100%;
+	}
+
+	#genres{
+		width: 90%;
+	}
+
+	#genre-card{
+		width: 90%;
+	}
+
+	.latest{
+		justify-content: space-evenly;
+	}
+
+	#notification,#nav-text,#search-bar,#profile{
+		position: absolute;
+		display: none;
+		visibility: hidden;
+	}
+
+	#nav-bar-dropdown{
+		position: relative;
+		margin-left: 10%;
+		visibility: visible;
+		display: flex;
+		align-self: center;
+	}
+
+	.nav-bar-dropdown-menu{
+		visibility: hidden;
+	}
+
+	#nav-bar-dropdown:hover .nav-bar-dropdown-menu{
+		visibility: visible !important;
+		opacity: 1;
+	}
+
+	.play-buttons{
+		width: 100%;
+	}
+
+	.player{
+		width: 27%;
+	}
+	.controller{
+		left: 49%;
+	}
+	
+	.left{
+		left: 22%;
+	}
+
+}
+
+
+
+@media only screen and (max-width: 470px){
+
+	#music-player{
+		justify-content: space-around;
+	}
+
+	.song-details{
+		width: 60%;
+	}
+	.sidepanel{
+		position: absolute;
+		visibility: hidden;
+	}
+	.player{
+		position: absolute;
+		visibility: hidden;
+	}
+	#nav-bar-dropdown-footer{
+		position: relative;
+		
+		visibility: visible;
+		display: flex;
+		align-self: center;
+	}
+
+	#nav-bar-dropdown-footer i{
+		margin-bottom: 5px;
+	}
+
+	.nav-bar-dropdown-menu-footer{
+		visibility: hidden;
+	}
+
+	.pb-ctr{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	#nav-bar-dropdown-footer:hover .nav-bar-dropdown-menu-footer{
+		visibility: visible !important;
+		opacity: 1;
+	}
+
+	#genre-card{
+		flex-flow: column wrap;
+	}
+
+
+	.gen-square{
+		width: 100% !important;
+		margin-bottom: 5px;
+		margin-top: 5px;
+	}
+	.gen-square img{
+		height: 100px;
+	}
+	.gen-text-square{
+		height: 100px;
+	}
+
+}
+
+
+@media only screen and (max-width: 390px){
+	*{
+		zoom: 0.99;
+	}
+}
+
+@media only screen and (max-width: 350px){
+	#popular{
+		margin: auto !important;
+	}
+	.artist{
+		margin: auto !important;
+		width: 90%;
+	}
+	.artists>span{
+		margin: 20px;
+	}
+
+	.play-artist{
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background-color: white;
+		color: grey;
+		opacity: 0.7;
+
+	}
+
+	.artists img{
+		width: 60px !important;
+		height: 60px !important;
+		border-radius: 50%;
+		object-fit: cover;
+		margin-bottom: 10px;
+	}
+
+	.artists span span{
+		text-align: center;
+		width: 60px;
+	}
+}
+
+@media only screen and (max-width: 300px){
+	.song-details{
+		width: 70%;
+	}
+	.cover-image img{
+		height: 50px;
+		width: 50px;
+	}
+
+	.playbutton{
+		height: 50px;
+		width: 50px;
+	}
+
+	#popular{
+		width: 100% !important;
+		justify-content: flex-start !important;
+		margin-left: 0px;
+	}
+
+	.artists{
+		width: 90% !important;
+		margin-left: 0px !important;
+	}
+
+	.artists>span{
+		margin: 20px;
+	}
+
+	.artists>span:hover{
+		zoom: 1.03;
+	}
+	.carousel{
+		height: 30vh;
+	}
+}
+
+
+/*Removing the Scroll Bar*/
+*::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+*{ 
+	-ms-overflow-style: none; 
+}
